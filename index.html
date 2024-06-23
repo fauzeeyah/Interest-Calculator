@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Finance</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="header">
+        <img src="images/Soft Finance.jpg" alt="Finance Logo" class="logo">
+        <h1 class="company-name">Soft Finance</h1>
+        <nav>
+            <ul>
+                <li><a href="#mission">Home</a></li>
+                <li><a href="#calculator">Interest Calculator</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container" id="mission">
+        <h2>Our Mission</h2>
+        <p>At Soft Finance, we are committed to empowering startup fashion businesses to succeed. We provide interest-free loans and partner with entrepreneurs, sharing both profits and losses to foster mutual growth. Our mission is to support the fashion industry's pioneers by offering the financial backing they need without the weight of interest.</p>
+    </div>
+    <div class="container" id="calculator">
+        <h2>Simple Interest Calculator</h2>
+        <form id="interest-form">
+            <div class="form-group">
+                <label for="principal">Principal Amount (£):</label>
+                <input type="number" id="principal" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="rate">Annual Interest Rate (%):</label>
+                <input type="number" id="rate" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="years">Number of Years:</label>
+                <input type="number" id="years" required>
+            </div>
+            <button type="button" onclick="calculateInterest()">Calculate</button>
+        </form>
+        <div class="result">
+            <p id="interest-result"></p>
+            <p id="total-result"></p>
+        </div>
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
